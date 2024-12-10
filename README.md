@@ -20,13 +20,15 @@ To use this project, follow the steps below:
    ```bash
    git clone <repository-link>
 2. Navigate to the project directory:
-
+```bash
 cd emotion-detection
-
+```
 3. Install the required dependencies:
 
+```bash
 pip install -r requirements.txt
-
+```
 4. Run the Streamlit application:
-
+```bash
 streamlit run main.py
+```
