@@ -21,7 +21,7 @@ To use this project, follow the steps below:
    git clone <repository-link>
 2. Navigate to the project directory:
 ```bash
-cd emotion-detection
+cd emotionDetectionStreamlit
 ```
 3. Install the required dependencies:
 
