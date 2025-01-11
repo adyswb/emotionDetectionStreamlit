@@ -134,11 +134,15 @@ def app():
             suggestion_placeholder = st.empty()
 
             try:
+                # Inside the while loop for the webcam
                 while run_webcam:
                     ret, frame = cap.read()
                     if not ret:
                         st.error("Failed to access webcam.")
                         break
+                    
+                    # Flip the frame horizontally to create a mirrored effect
+                    frame = cv2.flip(frame, 1)
 
                     faces = face_cascade.detectMultiScale(frame, 1.3, 5)
                     for (x, y, w, h) in faces:
@@ -162,6 +166,7 @@ def app():
 
                     if save_video:
                         out.write(frame)
+
 
             finally:
                 cap.release()
